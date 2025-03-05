@@ -22,7 +22,7 @@ body {
 	font-family: 'Poppins', serif;
 	font-weight: 400;
 	font-size: 18px;
-	line-height: 27px;
+	line-height: 1.5;
 	letter-spacing: 0%;
 	color: #b0adad;
 	background-color: #212121;
@@ -178,3 +178,48 @@ body {
 }
 
 /* HERO END*/
+
+.main-content {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.about-me {
+	padding-top: 46px;
+}
+
+.about-me-continer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.about-me-img {
+	width: 553px;
+}
+
+.about-me-info {
+	max-width: 580px;
+	width: 100%;
+}
+
+.about-me-title3 {
+	color: #4c70ef;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.5;
+	letter-spacing: 10%;
+	margin-bottom: 12px;
+}
+
+.about-me-title {
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 1.5;
+	letter-spacing: 0%;
+	color: #fff;
+}
+
+.about-me-text:not(:last-child) {
+	margin-bottom: 16px;
+}
