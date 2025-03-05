@@ -186,6 +186,7 @@ body {
 
 .about-me {
 	padding-top: 46px;
+	padding-bottom: 60px;
 }
 
 .about-me-continer {
@@ -203,7 +204,7 @@ body {
 	width: 100%;
 }
 
-.about-me-title3 {
+.overall-title3 {
 	color: #4c70ef;
 	font-weight: 600;
 	font-size: 24px;
@@ -212,14 +213,77 @@ body {
 	margin-bottom: 12px;
 }
 
-.about-me-title {
+.overall-title {
 	font-weight: 600;
 	font-size: 36px;
 	line-height: 1.5;
 	letter-spacing: 0%;
 	color: #fff;
+	margin-bottom: 32px;
 }
 
 .about-me-text:not(:last-child) {
 	margin-bottom: 16px;
 }
+
+/* WHAT START */
+.what {
+	padding-top: 64px;
+	padding-bottom: 60px;
+}
+
+.what-title-wrapper {
+	text-align: center;
+	margin-bottom: 51px;
+}
+
+.what-title {
+	margin-bottom: 0;
+}
+
+.what-list {
+	display: flex;
+	justify-content: space-between;
+	max-width: 980px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.what-item {
+	max-width: 480px;
+	width: 100%;
+	background-color: #292c36;
+	border-radius: 12px;
+	padding: 27px 24px 21px;
+}
+
+.what-list-top {
+	display: flex;
+	align-items: center;
+	margin-bottom: 35px;
+}
+
+.what-pic {
+	margin-right: 16px;
+	background-color: #38405a;
+	width: 66px;
+	height: 66px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.what-title3 {
+	font-family: Poppins;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: 0%;
+	color: #fff;
+	max-width: 219px;
+	width: 100%;
+}
+
+/* WHAT END */
