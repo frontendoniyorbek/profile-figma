@@ -285,5 +285,72 @@ body {
 	max-width: 219px;
 	width: 100%;
 }
-
 /* WHAT END */
+
+/* PORTFOLIO START */
+.portfolio {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.portfolio-info {
+	margin-bottom: 32px;
+}
+
+.portfolio-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.portfolio-item {
+	max-width: 380px;
+	width: 100%;
+	background-color: #292c36;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+}
+
+.portfolio-item img {
+	width: 380px;
+	height: 283px;
+	object-fit: cover;
+	border-radius: 12px 12px 0 0;
+}
+
+.portfolio-inner {
+	padding: 20px 24px;
+}
+
+.portfolio-title {
+	margin-bottom: 12px;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.5;
+	letter-spacing: 0%;
+	color: #fff;
+}
+
+.portfolio-inner a {
+	background-color: #558fff;
+	padding: 10px 18px;
+	border-radius: 6px;
+	color: #fff;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1.5;
+	letter-spacing: 10%;
+	border: 1px solid transparent;
+	transition: all 0.4s ease;
+}
+
+.portfolio-inner a:hover {
+	border: 1px solid #558fff;
+	background-color: transparent;
+	color: #558fff;
+}
+
+.portfolio-inner a:active {
+	opacity: 0.6;
+}
+/* PORTFOLIO END */
