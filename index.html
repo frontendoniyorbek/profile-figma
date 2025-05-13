@@ -3,25 +3,135 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Muhammadamin - Front-End Development and UI/UX Designer Portfolio" />
 		<title>Muhammadamin</title>
-		<!-- FONTS -->
+
+		<!-- Preload critical assets -->
+		<link rel="preload" href="images/header/logo.svg" as="image" fetchpriority="high" />
+		<link rel="preload" href="css/styles.css" as="style" />
+		<link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" />
+		<link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script" />
+
+		<!-- FONTS with optimized loading -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-			rel="stylesheet" />
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+			media="print"
+			onload="this.media='all'" />
+		<noscript>
+			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		</noscript>
 
-		<!-- CSS -->
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<!-- Inline critical CSS -->
+		<style>
+			/* Critical CSS for above-the-fold content */
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: 'Poppins', sans-serif;
+			}
+			.site-top {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+			.site-header {
+				padding: 20px 0;
+			}
+			.site-header__container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 15px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.logo {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				color: #000;
+			}
+			.logo img {
+				margin-right: 10px;
+				width: 40px;
+				height: 40px;
+			}
+			.sitenav {
+				display: flex;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.sitenav__item {
+				margin: 0 15px;
+			}
+			.sitenav__link {
+				text-decoration: none;
+				color: #000;
+				font-weight: 500;
+			}
+			.hero {
+				flex-grow: 1;
+				display: flex;
+				align-items: center;
+			}
+			.hero__container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 15px;
+			}
+			.hero__title {
+				font-size: 3rem;
+				margin-bottom: 10px;
+			}
+			.hero__text {
+				font-size: 1.2rem;
+				margin-bottom: 30px;
+			}
+			.social {
+				display: flex;
+				list-style: none;
+				padding: 0;
+			}
+			.social__item {
+				margin-right: 15px;
+			}
+			.social__link {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background-color: #f5f5f5;
+			}
+			@media (max-width: 768px) {
+				.site-header__container {
+					flex-direction: column;
+				}
+				.sitenav {
+					margin-top: 20px;
+				}
+			}
+		</style>
+
+		<!-- CSS with async loading -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
+		<noscript><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /></noscript>
+
 		<link rel="icon" href="images/header/logo.svg" />
-		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="css/styles.css" /></noscript>
 	</head>
 	<body>
 		<div class="site-top">
 			<header class="site-header">
 				<div class="site-header__container">
 					<a class="logo" href="/" data-aos="fade-up-right">
-						<img src="images/header/logo.svg" alt="logo" />
+						<img src="images/header/logo.svg" alt="logo" width="40" height="40" fetchpriority="high" />
 						<h2>Muhammadamin</h2>
 					</a>
 					<ul class="sitenav" data-aos="fade-left">
@@ -43,7 +153,7 @@
 
 			<section class="hero">
 				<div class="hero__container">
-					<h1 class="hero__title" data-aos="fade-up-right">I’m Muhammadamin</h1>
+					<h1 class="hero__title" data-aos="fade-up-right">I'm Muhammadamin</h1>
 					<p class="hero__text" data-aos="fade-up-left">Front-End Development - UI/UX Designer</p>
 
 					<ul class="social" data-aos="fade-down-right">
@@ -73,11 +183,11 @@
 			<section class="about-me">
 				<div class="container about-me__continer">
 					<div data-aos="fade-left" class="about-me__img">
-						<img src="images/about-me/about-image.png" alt="about-image" />
+						<img src="images/about-me/about-image.png" alt="about-image" width="400" height="500" loading="lazy" />
 					</div>
 					<div class="about-me__info">
 						<h3 data-aos="fade-right" class="overall-title3">ABOUT ME</h3>
-						<h2 data-aos="fade-right" class="overall-title">I’m Muhammadamin</h2>
+						<h2 data-aos="fade-right" class="overall-title">I'm Muhammadamin</h2>
 						<p data-aos="fade-right" class="about-me__text">
 							Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
 							Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
@@ -101,7 +211,7 @@
 						<li data-aos="fade-right" class="what__item">
 							<div class="what__list-top">
 								<div class="what__pic">
-									<img src="images/what/web-development.svg" alt="" />
+									<img src="images/what/web-development.svg" alt="Web Development" width="50" height="50" loading="lazy" />
 								</div>
 								<h3 class="what__title3">Front-end Development</h3>
 							</div>
@@ -110,7 +220,7 @@
 						<li data-aos="fade-left" class="what__item">
 							<div class="what__list-top">
 								<div class="what__pic">
-									<img src="images/what/ui-design.svg" alt="" />
+									<img src="images/what/ui-design.svg" alt="UI Design" width="50" height="50" loading="lazy" />
 								</div>
 								<h3 class="what__title3">
 									UI/UX <br />
@@ -134,7 +244,7 @@
 
 					<ul class="portfolio__list">
 						<li data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" class="portfolio__item">
-							<img src="images/portifolio/helios.svg" alt="portfolio" />
+							<img src="images/portifolio/helios.svg" alt="Helios App Design" width="350" height="250" loading="lazy" />
 							<div class="portfolio__inner">
 								<h3 class="portfolio__title">Helios App Design</h3>
 								<a class="btn" href="https://helios-lens-nine.vercel.app/" target="_blank">View Demo</a>
@@ -142,7 +252,7 @@
 						</li>
 
 						<li data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" class="portfolio__item">
-							<img src="images/portifolio/portifolio.svg" alt="portfolio" />
+							<img src="images/portifolio/portifolio.svg" alt="Cafe Street Web Design" width="350" height="250" loading="lazy" />
 							<div class="portfolio__inner">
 								<h3 class="portfolio__title">Cafe Street Web Design</h3>
 								<a class="btn" href="https://profile-figma.vercel.app/" target="_blank">View Demo</a>
@@ -150,7 +260,7 @@
 						</li>
 
 						<li data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" class="portfolio__item">
-							<img src="images/portifolio/akademik-nashir.svg" alt="portfolio" />
+							<img src="images/portifolio/akademik-nashir.svg" alt="Travel App Design" width="350" height="250" loading="lazy" />
 							<div class="portfolio__inner">
 								<h3 class="portfolio__title">Travel App Design</h3>
 								<a class="btn" href="https://dtn-akademiknashr.netlify.app/" target="_blank">View Demo</a>
@@ -175,17 +285,60 @@
 		<footer class="site-footer">
 			<div class="container site-footer__container">
 				<a class="site-footer__link" href="/">
-					<img src="images/header/logo.svg" alt="" />
+					<img src="images/header/logo.svg" alt="Logo" width="40" height="40" loading="lazy" />
 				</a>
 				<p class="site-footer__text">COPYRIGHT © 2018 CV RAULIQBAL.</p>
 			</div>
 		</footer>
 		<!-- FOOTER END-->
 
-		<!-- JS -->
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script>
-			AOS.init();
+		<!-- JS with defer -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+		<script defer>
+			document.addEventListener('DOMContentLoaded', function () {
+				// Initialize AOS with optimized settings
+				AOS.init({
+					disable: window.innerWidth < 768, // Disable on mobile for better performance
+					once: true, // Only animate once
+					mirror: false, // No mirror animations
+					offset: 120, // Offset (in px) from the original trigger point
+					delay: 0, // No delay
+					throttleDelay: 99, // The delay on throttle for performance
+				});
+
+				// Lazy load images that are off-screen
+				if ('IntersectionObserver' in window) {
+					const imgObserver = new IntersectionObserver((entries, observer) => {
+						entries.forEach(entry => {
+							if (entry.isIntersecting) {
+								const img = entry.target;
+								if (img.dataset.src) {
+									img.src = img.dataset.src;
+									img.removeAttribute('data-src');
+								}
+								observer.unobserve(img);
+							}
+						});
+					});
+
+					document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+						imgObserver.observe(img);
+					});
+				}
+
+				// Performance monitoring
+				if ('performance' in window && 'PerformanceObserver' in window) {
+					const observer = new PerformanceObserver(list => {
+						const entries = list.getEntries();
+						entries.forEach(entry => {
+							if (entry.name === 'LCP') {
+								console.log('LCP:', entry.startTime);
+							}
+						});
+					});
+					observer.observe({ type: 'largest-contentful-paint', buffered: true });
+				}
+			});
 		</script>
 	</body>
 </html>
